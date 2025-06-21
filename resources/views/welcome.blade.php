@@ -34,6 +34,12 @@
                 শুরু করুন
             </a>
         </div>
+
+        <div class="max-w-7xl mx-auto px-4 ">
+            <div>
+                
+            </div>
+        </div>
     </main>
 
     <!-- footer -->
