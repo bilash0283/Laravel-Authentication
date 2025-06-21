@@ -1,7 +1,7 @@
 @include('layouts.header')
 <x-guest-layout>
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -40,7 +40,7 @@
                 </a>
             @endif
 
-            <a href="{{ route('register') }}" class="text-sm text-gray-600 px-md rounded-md bg-green-700 p-2">Register Now</a>
+            <a href="{{ route('register') }}" class="text-sm mx-3 px-md rounded-md text-white bg-green-700 p-2">Register Now</a>
 
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
