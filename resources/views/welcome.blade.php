@@ -14,13 +14,14 @@
 
         <div class="max-w-7xl mx-auto px-4 py-5">
             <div class="grid col-span-4 gap-2">
-                <div class="bg-slate-200 hover:bg-slate-100 ">
+                <div class="bg-slate-200 hover:bg-slate-100 p-4">
                     <div>
                         <h2 class="p-3">This is a Heading</h2>
                     </div>
                     <div class="py-3">
                         <p class="p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam inventore corporis dignissimos ea eum saepe ratione, aliquid dolorem voluptate excepturi sequi similique cum, eos quasi incidunt eius. Suscipit, obcaecati perferendis.</p>
                     </div>
+                    <a href="" class="w-2 h-2 bg-fuchsia-500 rounded-xl text-center text-white px-4 py-2">Read More</a>
                 </div>
             </div>
         </div>
