@@ -13,7 +13,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 py-5">
-            <div class="grid-flow-col gap-3">
+            <div class="d-flex col-span-4 gap-3">
                 <div class="bg-slate-200 hover:bg-slate-100 p-4">
                     <div>
                         <h2 class="p-3 font-extralight ">This is a Heading</h2>
