@@ -11,7 +11,7 @@
 
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
-    <header class="bg-white shadow">
+    <header class="shadow bg-slate-400 hover:bg-slate-300">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-blue-600">CC Zone</h1>
             <nav>
