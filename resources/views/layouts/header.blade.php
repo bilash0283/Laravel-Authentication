@@ -11,11 +11,11 @@
   <!-- Header -->
   <header class="bg-white shadow">
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-600">আমার ওয়েবসাইট</h1>
+      <h1 class="text-2xl font-bold text-blue-600">World Book</h1>
       <nav class="space-x-4 mt-2 md:mt-0">
-        <a href="#" class="text-gray-700 hover:text-blue-500">হোম</a>
-        <a href="#" class="text-gray-700 hover:text-blue-500">সেবা</a>
-        <a href="#" class="text-gray-700 hover:text-blue-500">যোগাযোগ</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Blogs</a>
+        <a href="{{ route('login') }}" class="text-gray-700 hover:text-blue-500">Login</a>
       </nav>
     </div>
   </header>
@@ -27,13 +27,13 @@
       <!-- Text Section -->
       <div class="w-full lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4">
-          স্বাগতম আমাদের ওয়েবসাইটে
+          WELCOME OUR WEBSITE
         </h2>
         <p class="text-gray-600 text-base sm:text-lg mb-6">
-          এখানে আপনি খুঁজে পাবেন আপনার প্রয়োজনীয় সেবা, গাইডলাইন ও সহযোগিতা। আমাদের সাথেই থাকুন!
+          THERE YOUR SEARCH BLOGS DAILY LIFE STYLE , SUCCESSFULL REAL LIFE STORY , AND SHERE YOUR SUCCESS STORY
         </p>
         <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-700 transition">
-          শুরু করুন
+          GET STARTED
         </a>
       </div>
 
