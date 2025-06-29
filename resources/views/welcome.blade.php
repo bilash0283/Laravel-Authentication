@@ -12,7 +12,7 @@
         </a>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 py-5 bg-gray-500 flex col-span-3 gap-2 py-3">
+    <div class="max-w-7xl mx-auto px-4 py-5 bg-gray-500 flex col-span-3 gap-2">
         <div>
             <div class="max-w-md mx-auto">
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
