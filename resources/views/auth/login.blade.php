@@ -1,4 +1,4 @@
-@include('layouts.header')
+
 <x-guest-layout>
     <!-- Session Status -->
     <form method="POST" action="{{ route('login') }}">
@@ -44,4 +44,3 @@
         </div>
     </form>
 </x-guest-layout>
-@include('layouts.footer')
