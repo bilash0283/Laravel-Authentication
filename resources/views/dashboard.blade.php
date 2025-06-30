@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="py-12">
-        
+    <div class="py-4">
+
     </div>
 </x-app-layout>
 
