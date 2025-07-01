@@ -18,6 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/category-create',[Category::class,'create'])->name('category_create');
+    Route::get('/category-manage',[Category::class,'category'])->name('category_manage');
 
 });
 
