@@ -54,10 +54,10 @@
                                     <img src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg" alt="" class="w-12 h-12 rounded-full border-spacing-1 ">
                                 </td>
                                 <td class="p-2 ">Techonology</td>
-                                <td class="p-2 text-green-600">Active</td>
+                                <td class="p-2 text-green-600 font-bold">Active</td>
                                 <td class="p-2">
                                     <a href="" class="bg-indigo-600 text-white px-1 rounded-sm ">edit</a>
-                                    
+                                    <a href="" class="bg-red-600 text-white px-1 rounded-sm">delete</a>
                                 </td>
                             </tr>
                         </tbody>
