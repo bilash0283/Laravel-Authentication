@@ -6,8 +6,10 @@
                 <nav class="flex-1 p-4">
                     <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Create Vlog</a>
                     <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Manage Vlogs</a>
-                    <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">User Create</a>
+                    <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Create User</a>
                     <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Manage Users</a>
+                    <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Create Category</a>
+                    <a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded">Manage Category</a>
                 </nav>
                 <div class="p-4 border-t border-gray-700">
                     <button class="w-full py-2 bg-red-600 hover:bg-red-700 rounded">Logout</button>
