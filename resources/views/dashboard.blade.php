@@ -56,7 +56,8 @@
                                 <td class="p-2 ">Techonology</td>
                                 <td class="p-2 text-green-600">Active</td>
                                 <td class="p-2">
-                                    edit
+                                    <a href="" class="bg-indigo-600 text-white px-1 rounded-sm ">edit</a>
+                                    
                                 </td>
                             </tr>
                         </tbody>
