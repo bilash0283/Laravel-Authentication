@@ -11,7 +11,7 @@
   <!-- Header -->
   <header class="bg-white shadow">
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-600">World Book</h1>
+      <h1 class="text-2xl font-bold text-blue-600"><span class="text-red-600 font-bold">BK </span><span class="text-green-600 font-bold">Vlog</span></h1>
       <nav class="space-x-4 mt-2 md:mt-0">
         <a href="{{ route('login') }}" class="text-gray-700 hover:text-blue-500 w-4 h-4 border-gray-100 rounded-full bg-gray-300 p-2">Login</a>
       </nav>
