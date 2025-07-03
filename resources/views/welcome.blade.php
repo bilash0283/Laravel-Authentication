@@ -7,12 +7,12 @@
         <p class="text-lg text-gray-600 mb-8">
             আমরা আপনাকে দিচ্ছি সেরা সার্ভিস — দ্রুত, নিরাপদ ও বিশ্বাসযোগ্য!
         </p>
-        <a href="#" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition">
+        <a href="{{ route('login') }}" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition">
             শুরু করুন
         </a>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 py-5 bg-gray-500 flex col-span-3 gap-2">
+    <div class="max-w-7xl mx-auto px-4 py-5 bg-blue-50 flex col-span-3 gap-2">
         <div>
             <div class="max-w-md mx-auto">
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
