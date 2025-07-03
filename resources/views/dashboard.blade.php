@@ -33,7 +33,7 @@
     <!-- Sidebar -->
     <aside id="sidebar" class="w-full md:w-64 bg-white shadow-md md:block hidden">
       <div class="p-6 border-b">
-        <h2 class="text-xl font-bold text-gray-700">Sidebar</h2>
+        <a href="{{ route('dashboard') }}" class="text-xl font-bold text-gray-700">Dahboard</a>
       </div>
       <nav class="p-4 space-y-2">
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Dashboard</a>
