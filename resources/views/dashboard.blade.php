@@ -36,13 +36,13 @@
         <a href="{{ route('dashboard') }}" class="text-xl font-bold text-gray-700">Dahboard</a>
       </div>
       <nav class="p-4 space-y-2">
-        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Dashboard</a>
-        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Users</a>
-        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Reports</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Category</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Category</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Vlog</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Vlog</a>
         <a href="#" class="block px-4 py-2 text-red-600 hover:bg-red-100 rounded">
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-
                 <x-dropdown-link :href="route('logout')"
                         onclick="event.preventDefault();
                                     this.closest('form').submit();">
@@ -62,7 +62,7 @@
   <!-- Footer -->
   <footer class="bg-white shadow-inner mt-4">
     <div class="max-w-7xl mx-auto px-4 py-4 text-center text-gray-600">
-      &copy; 2025 My Dashboard. All rights reserved.
+      &copy; {{ date("Y") }} My Dashboard. All rights reserved.
     </div>
   </footer>
 
