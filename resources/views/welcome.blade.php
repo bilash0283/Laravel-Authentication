@@ -12,6 +12,13 @@
         </a>
     </div>
 
+    <div class="card">
+        <div class="card-header">
+            <h3>This is a Header Page</h3>
+        </div>
+        
+    </div>
+
     <div class="max-w-7xl mx-auto px-4 py-5 bg-blue-50 flex col-span-3 gap-2">
         <div>
             <div class="max-w-md mx-auto">
