@@ -40,16 +40,11 @@
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Category</a>
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Vlog</a>
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Vlog</a>
-        <a href="#" class="block px-4 py-2 text-red-600 hover:bg-red-100 rounded">
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <x-dropdown-link :href="route('logout')"
-                        onclick="event.preventDefault();
-                                    this.closest('form').submit();">
-                    {{ __('Log Out') }}
-                </x-dropdown-link>
-            </form>
-        </a>
+        <x-dropdown-link :href="route('logout')"
+                onclick="event.preventDefault();
+                            this.closest('form').submit();">
+            {{ __('Log Out') }}
+        </x-dropdown-link>
       </nav>
     </aside>
     <!-- Main Content -->

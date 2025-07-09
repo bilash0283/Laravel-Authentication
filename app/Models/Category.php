@@ -10,3 +10,6 @@ class Category extends Model
         return view('dashboard');
     }
 }
+
+
+
