@@ -28,7 +28,7 @@
     </div>
   </header>
 
-  <div class="flex flex-1 flex-col md:flex-row">
+<div class="flex flex-1 flex-col md:flex-row">
 
     <!-- Sidebar -->
     <aside id="sidebar" class="w-full md:w-64 bg-white shadow-md md:block hidden">
@@ -36,7 +36,7 @@
         <a href="{{ route('dashboard') }}" class="text-xl font-bold text-gray-700">Dahboard</a>
       </div>
       <nav class="p-4 space-y-2">
-        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Category</a>
+        <a href="{{ route('category_add') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Category</a>
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Category</a>
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Vlog</a>
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Vlog</a>
