@@ -51,9 +51,13 @@
     <main class="flex-1 p-4 sm:p-6">
       <h1 class="text-xl font-bold ">Add Category Page</h1>
       <div class="w-full h-20 bg-indigo-100 pt-5">
-            <div>
-                <label for="">Name</label>
-                <input type="text" name="name" placeholder="Enter Category Name">
+            <div class="my-5">
+                <label for="name" class="text-xl text-black p-4">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Category Name" class="w-4/12 h-4 px-4 text-black text-xl bg-red-300 py-5 rounded-xl border-spacing-1">
+            </div>
+            <div class="my-5">
+                <label for="description" class="text-xl text-black p-4">Description</label>
+                <input type="text" name="description" id="description" placeholder="Enter Category Description" class="w-4/12 h-4 px-4 text-black text-xl bg-red-300 py-5 rounded-xl border-spacing-1">
             </div>
       </div>
     </main>
