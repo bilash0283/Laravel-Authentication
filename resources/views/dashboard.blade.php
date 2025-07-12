@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Dashboard</title>
+  <title>BK Vlog Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @media (max-width: 768px) {
@@ -18,7 +18,7 @@
   <!-- Header -->
   <header class="bg-white shadow-md w-full sticky top-0 z-10">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-gray-800">My Dashboard</h1>
+      <h1 class="text-xl font-bold text-gray-800"><span class="text-green-600">BK</span> <span class="text-red-600">Vlog</span></h1>
       <button class="md:hidden text-gray-600" onclick="document.getElementById('sidebar').classList.toggle('hidden')">
         ☰
       </button>
@@ -49,7 +49,7 @@
     </aside>
     <!-- Main Content -->
     <main class="flex-1 p-4 sm:p-6">
-      <h1 class="text-xl font-bold ">Add Category Page</h1>
+      <h1 class="text-xl font-bold ">Your Dashboard</h1>
         @yield('content')
     </main>
 
