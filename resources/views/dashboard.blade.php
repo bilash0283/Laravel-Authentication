@@ -36,7 +36,7 @@
         <a href="{{ route('dashboard') }}" class="text-xl font-bold text-gray-700">Dahboard</a>
       </div>
       <nav class="p-4 space-y-2">
-        <a href="{{ route('category_add') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Category</a>
+        <a href="{{ route('category_create') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Category</a>
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Category</a>
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Vlog</a>
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Vlog</a>
@@ -49,6 +49,7 @@
     </aside>
     <!-- Main Content -->
     <main class="flex-1 p-4 sm:p-6">
+      <h1 class="text-xl font-bold ">Add Category Page</h1>
         @yield('content')
     </main>
 
