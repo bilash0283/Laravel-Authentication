@@ -63,17 +63,12 @@
                 <label for="description" class="block text-sm font-medium mb-2">Image</label>
                 <input type="file" id="description" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter Description">  
             </div>
-            <div id="hs-combobox-json-example-based-on-api-pathes" class="relative" >
-                <div class="relative">
-                    <input class="py-2.5 sm:py-3 ps-4 pe-9 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" type="text" role="combobox" aria-expanded="false" value="Argentina" data-hs-combo-box-input="">
-                    <div class="absolute top-1/2 end-3 -translate-y-1/2" aria-expanded="false" role="button" data-hs-combo-box-toggle="">
-                    <svg class="shrink-0 size-3.5 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m7 15 5 5 5-5"></path>
-                        <path d="m7 9 5-5 5 5"></path>
-                    </svg>
-                    </div>
-                </div>
-                <div class="absolute z-50 w-full max-h-72 p-1 bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700" style="display: none;" role="listbox" data-hs-combo-box-output=""></div>
+            <div class="max-w-sm my-2">
+                <label for="status" class="block text-sm font-medium mb-2">Status</label>
+                <select name="status" id="status" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                    <option value="1">Active</option>
+                    <option value="2">Inactive</option>
+                </select> 
             </div>
         </div>
     </main>
