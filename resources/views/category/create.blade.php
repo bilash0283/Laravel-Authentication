@@ -50,16 +50,16 @@
     <!-- Main Content -->
     <main class="flex-1 p-4 sm:p-6">
       <h1 class="text-xl font-bold ">Add Category Page</h1>
-      <div class="w-full h-20 bg-indigo-100 pt-5">
-            <div class="my-5">
-                <label for="name" class="text-xl text-black p-4">Name</label>
-                <input type="text" name="name" id="name" placeholder="Enter Category Name" class="w-4/12 h-4 px-4 text-black text-xl bg-red-300 py-5 rounded-xl border-spacing-1">
+        <div class="w-full my-6">
+            <div class="max-w-sm my-2">
+                <label for="input-label" class="block text-sm font-medium mb-2">Name</label>
+                <input type="email" id="input-label" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter Name">  
             </div>
-            <div class="my-5">
-                <label for="description" class="text-xl text-black p-4">Description</label>
-                <input type="text" name="description" id="description" placeholder="Enter Category Description" class="w-4/12 h-4 px-4 text-black text-xl bg-red-300 py-5 rounded-xl border-spacing-1">
+            <div class="max-w-sm my-2">
+                <label for="input-label" class="block text-sm font-medium mb-2">Name</label>
+                <input type="email" id="input-label" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter Name">  
             </div>
-      </div>
+        </div>
     </main>
 
   </div>
