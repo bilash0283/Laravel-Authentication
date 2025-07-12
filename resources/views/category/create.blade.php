@@ -50,7 +50,12 @@
     <!-- Main Content -->
     <main class="flex-1 p-4 sm:p-6">
       <h1 class="text-xl font-bold ">Add Category Page</h1>
-        @yield('content')
+      <div class="w-full h-20 bg-indigo-100 pt-5">
+            <div>
+                <label for="">Name</label>
+                <input type="text" name="name" placeholder="Enter Category Name">
+            </div>
+      </div>
     </main>
 
   </div>
