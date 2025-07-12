@@ -65,10 +65,16 @@
             </div>
             <div class="max-w-sm my-2">
                 <label for="status" class="block text-sm font-medium mb-2">Status</label>
-                <select name="status" id="status" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                <select class="py-3 px-4 pe-9 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none bg-white dark:border-transparent dark:text-neutral-400 ">
+                    <option selected="">Open this select menu</option>
                     <option value="1">Active</option>
                     <option value="2">Inactive</option>
-                </select> 
+                </select>
+            </div>
+            <div class="max-w-sm my-2">
+                <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-yellow-100 text-green-800 hover:bg-yellow-200 focus:outline-hidden focus:bg-yellow-200 disabled:opacity-50 disabled:pointer-events-none dark:text-yellow-500">
+                    Submit Info
+                </button>
             </div>
         </div>
     </main>
