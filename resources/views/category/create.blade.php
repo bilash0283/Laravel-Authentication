@@ -50,6 +50,9 @@
     <!-- Main Content -->
     <main class="flex-1 p-4 sm:p-6">
       <h1 class="text-xl font-bold ">Add Category Page</h1>
+      @if (session('success'))
+      {{ session('success') }}
+      @endif
         <div class="w-full my-6">
             <form action="{{ route('category_store') }}" method="POST" enctype="multipart/form-data">
               @csrf

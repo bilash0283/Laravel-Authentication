@@ -12,6 +12,14 @@ class Category extends Model
     }
 
     public function store(Request $request){
+
+        $category = validator([
+            'name' => "required",
+            'description' => "required",
+            'image' => "nullabale",
+            'status' => "required"
+        ]);
+
        $category = new Category ;
 
         $category->name = $request->name;
@@ -21,6 +29,7 @@ class Category extends Model
 
         $category->save();
 
+        return redirect()->route('category_create')->with('success','Category Save Successfull');
     }
 }
 
