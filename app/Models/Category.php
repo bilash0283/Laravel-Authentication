@@ -12,7 +12,15 @@ class Category extends Model
     }
 
     public function store(Request $request){
-        dd($request);
+       $category = new Category ;
+
+        $category->name = $request->name;
+        $category->description = $request->description;
+        $category->image = $request->image;
+        $category->status = $request->status;
+
+        $category->save();
+
     }
 }
 
