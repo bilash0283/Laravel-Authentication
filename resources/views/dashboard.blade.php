@@ -45,6 +45,7 @@
                             this.closest('form').submit();">
             {{ __('Log Out') }}
         </x-dropdown-link>
+        <a href="{{ route('logout') }}">Log Out</a>
       </nav>
     </aside>
     <!-- Main Content -->
