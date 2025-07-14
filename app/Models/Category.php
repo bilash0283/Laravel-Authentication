@@ -31,8 +31,8 @@ class Category extends Model
 
         $category->name = $request->name;
         $category->description = $request->description;
-        $category->image = $request->image;
-        $category->status = $image_full_name;
+        $category->image = $image_full_name;
+        $category->status = $request->status;
 
         $category->save();
 
