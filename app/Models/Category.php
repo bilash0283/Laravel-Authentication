@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use function PHPUnit\Framework\returnArgument;
 
 class Category extends Model
 {
@@ -23,7 +24,7 @@ class Category extends Model
         $image_full_name = '';
         if(!empty($request->image)){
             $image_name = time().'.'.$request->image->extension();
-            $image_full_name = $request->image->move(public_path('images/vlog_image'), $image_name);
+            $image_full_name = $request->image->move(public_path('images/category_image'), $image_name);
         }
 
 
@@ -37,6 +38,10 @@ class Category extends Model
         $category->save();
 
         return redirect()->route('category_create')->with('success','Category Save Successfull');
+    }
+
+    public function category(){
+        return view('category.view_cate');
     }
 }
 
