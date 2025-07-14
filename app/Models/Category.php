@@ -41,7 +41,8 @@ class Category extends Model
     }
 
     public function category(){
-        return view('category.view_cate');
+        $category = new Category;
+        return view('category.view_cate',['categories' => $category->all()]);
     }
 }
 
