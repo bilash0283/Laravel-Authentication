@@ -42,7 +42,7 @@ class Category extends Model
 
     public function category(){
         $category = new Category;
-        return view('category.view_cate',['categories' => $category->all()]);
+        return view('category.view_cate',['categories' => $category->all]);
     }
 }
 
