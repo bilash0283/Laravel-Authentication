@@ -16,15 +16,16 @@ class Category extends Model
         $category = validator([
             'name' => "required",
             'description' => "required",
-            'image' => "nullabale",
+            'image' => "mimes:jpg,jpeg,png",
             'status' => "required"
         ]);
         
         $image_full_name = '';
         if(!empty($request->image)){
             $image_name = time().'.'.$request->image->extension();
-            $image_full_name = $request->image->move(public_path('images/vlog_image/'),$image_name);
+            $image_full_name = $request->image->move(public_path('images/vlog_image'), $image_name);
         }
+
 
        $category = new Category ;
 
