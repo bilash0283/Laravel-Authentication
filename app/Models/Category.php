@@ -19,19 +19,27 @@ class Category extends Model
             'image' => "nullabale",
             'status' => "required"
         ]);
+        
+        $image_full_name = '';
+        if(!empty($request->image)){
+            $image_name = time().'.'.$request->image->extension();
+            $image_full_name = $request->image->move(public_path('images/vlog_image/'),$image_name);
+        }
 
        $category = new Category ;
 
         $category->name = $request->name;
         $category->description = $request->description;
         $category->image = $request->image;
-        $category->status = $request->status;
+        $category->status = $image_full_name;
 
         $category->save();
 
         return redirect()->route('category_create')->with('success','Category Save Successfull');
     }
 }
+
+
 
 
 
