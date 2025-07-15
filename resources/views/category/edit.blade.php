@@ -15,13 +15,13 @@
               </div>
               <div class="max-w-sm my-2">
                   <label for="description" class="block text-sm font-medium mb-2">Description</label>
-                  <input type="text" name="description" value="{{ $categories->description }}" id="description" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter Description">  
+                  <input type="text" name="description" value="{{ $categories->image }}" id="description" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter Description">  
               </div>
               <div class="max-w-sm my-2">
                   <label for="description" class="block text-sm font-medium mb-2">Image</label>
                   <input type="file" name="image" id="description" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter Description">  
-                  <img src="{{ $categories->image }}" alt="" class="w-10 h-10">
               </div>
+              <img src="{{ assert($categories->image) }}" class="w-10 h-10 "></td>
               <div class="max-w-sm my-2">
                   <label for="status" class="block text-sm font-medium mb-2">Status</label>
                   <select name="status" class="py-3 px-4 pe-9 block w-full bg-white border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:border-transparent dark:text-neutral-400 ">
