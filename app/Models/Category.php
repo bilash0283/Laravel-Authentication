@@ -21,10 +21,11 @@ class Category extends Model
             'status' => "required"
         ]);
         
-        $image_full_name = '';
+        $imageFull_name = '';
         if(!empty($request->image)){
             $image_name = time().'.'.$request->image->extension();
-            $image_full_name = $request->image->move(public_path('images/category_image'), $image_name);
+            $imageFull_name = "images/category_image/".$image_name;
+            $request->image->move(public_path('images/category_image'), $image_name);
         }
 
 
@@ -32,7 +33,7 @@ class Category extends Model
 
         $category->name = $request->name;
         $category->description = $request->description;
-        $category->image = $image_full_name;
+        $category->image = $imageFull_name;
         $category->status = $request->status;
 
         $category->save();

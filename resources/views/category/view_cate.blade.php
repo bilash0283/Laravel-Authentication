@@ -25,10 +25,10 @@
                         <tbody class="divide-y divide-gray-200">
                              @foreach ($categories as $category)
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{ $category->image }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"><img src="{{ $category->image }}" class="w-10 h-10 rounded-full " alt="{{ $category->image }}"></td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $category->name  }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $category->description }}</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $category->status }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-{{ $category->status == 1 ? 'green' : 'red' }}-800">{{ $category->status == 1 ? "Active" : "Inactive" }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                         <a href="#" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-hidden focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Edit</a>
 
