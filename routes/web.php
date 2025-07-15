@@ -20,7 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/category-create',[Category::class,'create'])->name('category_create');
     Route::post('/category-store',[Category::class,'store'])->name('category_store');
     Route::get('/category-manage',[Category::class,'category'])->name('category_manage');
-    Route::get('/category-edit',[Category::class,'edit'])->name('category_edit');
+    Route::get('/category-edit/{id}',[Category::class,'edit'])->name('category_edit');
 
 });
 

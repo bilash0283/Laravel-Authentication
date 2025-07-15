@@ -46,8 +46,9 @@ class Category extends Model
         return view('category.view_cate',['categories' => $category]);
     }
 
-    public function edit(){
-        return view('');
+    public function edit($id){
+        $category = Category::find($id);
+        return view('category.edit',['categories' => $category]);
     }
 
 
