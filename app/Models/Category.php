@@ -61,7 +61,7 @@ class Category extends Model
             'status' => "required"
         ]);
 
-        if($category->image->hash_file('image')){
+        if($request->hash_file('image')){
             $oldImage = public_path($category->image);
             if(file_exists($oldImage) && is_file($oldImage)){
                 unlink($oldImage);
