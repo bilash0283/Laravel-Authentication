@@ -20,20 +20,22 @@
                             <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Description</th>
                             <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Status</th>
                             <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action</th>
-                            </tr>
+                        </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200">
+                             @foreach ($categories as $category)
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">fsdfs</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">fsdfsd</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">sdfsdf</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">fsdfsd</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{ $category->image }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $category->name  }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $category->description }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $category->status }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                         <a href="#" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-hidden focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Edit</a>
 
                                         <a href="#" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:red-blue-800 focus:outline-hidden focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Delete</a>
                                     </td>
                                 </tr>
+                            @endforeach
                         </table>
                     </div>
                     </div>
