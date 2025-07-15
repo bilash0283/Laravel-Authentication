@@ -46,6 +46,10 @@ class Category extends Model
         return view('category.view_cate',['categories' => $category]);
     }
 
+    public function edit(){
+        return view('');
+    }
+
 
 
 }
