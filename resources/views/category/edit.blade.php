@@ -7,7 +7,7 @@
       <h3 class="text-green-600">{{ session('success') }}</h3>
       @endif
         <div class="w-full my-6">
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('category_update',[$categories->id]) }}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="max-w-sm my-2">
                   <label for="input-label" class="block text-sm font-medium mb-2">Name</label>

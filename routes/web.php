@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/category-store',[Category::class,'store'])->name('category_store');
     Route::get('/category-manage',[Category::class,'category'])->name('category_manage');
     Route::get('/category-edit/{id}',[Category::class,'edit'])->name('category_edit');
+    Route::post('/category-update/{id}',[Category::class,'cat_update'])->name('category_update');
 
 });
 

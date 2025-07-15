@@ -14,7 +14,7 @@ class Category extends Model
 
     public function store(Request $request){
 
-        $category = validator([
+        $request = validator([
             'name' => "required",
             'description' => "required",
             'image' => "mimes:jpg,jpeg,png",
@@ -51,7 +51,37 @@ class Category extends Model
         return view('category.edit',['categories' => $category]);
     }
 
+    public function cat_update(Request $request,$id){
+        $category = Category::findOrFail($id);
 
+        $request->validate([
+            'name' => "required",
+            'description' => "required",
+            'image' => "mimes:jpg,jpeg,png",
+            'status' => "required"
+        ]);
+
+        if($category->image->hash_file('image')){
+            $oldImage = public_path($category->image);
+            if(file_exists($oldImage) && is_file($oldImage)){
+                unlink($oldImage);
+            }
+
+            $image_name = time().'.'.$request->image->extension();
+            $imageFull_name = "images/category_image/".$image_name;
+            $request->image->move(public_path('images/category_image'), $image_name);
+            $category->image = $imageFull_name;
+        }
+
+        $category->name = $request->name;
+        $category->description = $request->description;
+        $category->status = $request->status;
+
+        $category->save();
+
+        return redirect()->route('category_manage')->with('success','Category Update Successfull');
+
+    }
 
 }
 
