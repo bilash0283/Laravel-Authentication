@@ -83,8 +83,15 @@ class Category extends Model
 
     }
 
-    public function delete(){
-        
+    public function delete($id){
+          $category = Category::find($id);
+
+    if ($category) {
+        $category->delete();
+        return response()->json(['message' => 'Category deleted successfully.']);
+    } else {
+        return response()->json(['error' => 'Category not found.'], 404);
+    }
     }
 
 }
