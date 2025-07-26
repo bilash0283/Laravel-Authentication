@@ -7,7 +7,7 @@
       <h3 class="text-green-600">{{ session('success') }}</h3>
       @endif
         <div class="w-full my-6">
-            <form action="{{ route('category_store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('vlog_store') }}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="max-w-sm my-2">
                   <label for="input-label" class="block text-sm font-medium mb-2">Name</label>
@@ -39,8 +39,8 @@
                   </select>
               </div>
               <div class="max-w-sm my-2">
-                  <button type="submit" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-yellow-100 text-green-800 hover:bg-yellow-200 focus:outline-hidden focus:bg-yellow-200 disabled:opacity-50 disabled:pointer-events-none dark:text-yellow-500">
-                      Submit Info
+                  <button type="submit" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-yellow-100 text-green-800 hover:bg-yellow-200 focus:outline-hidden focus:bg-yellow-200 disabled:opacity-50 disabled:pointer-events-none dark:text-green-500">
+                      Add Vlog
                   </button>
               </div>
             </form>

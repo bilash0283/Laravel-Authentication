@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Vlog extends Model
 {
@@ -11,4 +12,13 @@ class Vlog extends Model
         $category = Category::where('status',1)->get();
         return view('vlog.create',['categoryes' => $category]);
     }
+
+    public function vlog_store(Request $request){
+        $vlog = new Vlog;
+        dd($request);
+    }
+
+
+
 }
+

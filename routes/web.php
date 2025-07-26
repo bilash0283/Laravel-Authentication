@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/Category-Delete/{id}',[Category::class,'delete_cate'])->name('category_delete');
 
     Route::get('/vlog-create',[Vlog::class,'create_vlog'])->name('create_vlog');
+    Route::post('/Vlog-Save',[Vlog::class,'vlog_store'])->name('vlog_store');
 
 });
 
