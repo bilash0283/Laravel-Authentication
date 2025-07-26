@@ -21,6 +21,9 @@
                   <label for="input-label" class="block text-sm font-medium mb-2">Category</label>
                   <select name="category" id="category" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                     <option >Select category</option>
+                    @foreach ($categoryes as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
                   </select>
                 </div>
               <div class="max-w-sm my-2">

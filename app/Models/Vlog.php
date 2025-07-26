@@ -8,6 +8,7 @@ class Vlog extends Model
 {
     public function create_vlog()
     {
-        return view('vlog.create');
+        $category = Category::where('status',1)->get();
+        return view('vlog.create',['categoryes' => $category]);
     }
 }
