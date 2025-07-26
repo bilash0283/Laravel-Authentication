@@ -86,23 +86,18 @@ class Category extends Model
 
     public function delete_cate($id){
 
-         $category = Category::find($id);
-    if (!$category) {
-        return redirect()->route('category_manage')->with('error', 'Category not found.');
-    }
-
-    if ($category->image) {
-        $imagePath = public_path($category->image);
-        if (file_exists($imagePath)) {
-            @unlink($imagePath); 
+        $category = Category::find($id);
+        if (!$category) {
+            return redirect()->route('category_manage')->with('error', 'Category not found.');
         }
-    }
-    
-    $category->delete();
-
-    return redirect()->route('category_manage')->with('success', 'Category deleted successfully.');
-
-
+        if ($category->image) {
+            $imagePath = public_path($category->image);
+            if (file_exists($imagePath)) {
+                @unlink($imagePath); 
+            }
+        }
+        $category->delete();
+        return redirect()->route('category_manage')->with('success', 'Category deleted successfully.');
     }
 
     
