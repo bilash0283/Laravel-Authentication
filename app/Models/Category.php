@@ -84,12 +84,12 @@ class Category extends Model
 
     }
 
-    public function delete(){
+    public function delete($id){
+        $Category = Category::find($id);
+        $Category->delete();
 
-        // $category = Category::find();
-        // $category->delete();
+        return redirect()->route('category_manage')->with('success','Category Delete Successfull');
 
-        return "this is category delete section";
     }
 
     
