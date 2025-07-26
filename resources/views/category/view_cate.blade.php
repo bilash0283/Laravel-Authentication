@@ -6,6 +6,9 @@
       @if (session('success'))
       <h3 class="text-green-600">{{ session('success') }}</h3>
       @endif
+      @if (session('error'))
+        <h3 class="text-red-6000">{{ session('error') }}</h3>
+      @endif
 
         <div class="w-full my-6">
             <div class="flex flex-col">

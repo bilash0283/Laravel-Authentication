@@ -84,20 +84,24 @@ class Category extends Model
 
     }
 
-    public function delete($id){
-        $Category = Category::find($id);
+    public function delete_cate($id){
 
+         $category = Category::find($id);
+    if (!$category) {
+        return redirect()->route('category_manage')->with('error', 'Category not found.');
+    }
 
-        if($Category->image){
-            $old_img = public_path($Category->image);
-           if(file_exists($old_img) || is_file($old_img)){
-                unlink($old_img);
-           }
+    if ($category->image) {
+        $imagePath = public_path($category->image);
+        if (file_exists($imagePath)) {
+            @unlink($imagePath); 
         }
+    }
+    
+    $category->delete();
 
-        $Category->delete();
+    return redirect()->route('category_manage')->with('success', 'Category deleted successfully.');
 
-        return redirect()->route('category_manage')->with('success','Category Delete Successfull');
 
     }
 
