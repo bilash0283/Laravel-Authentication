@@ -2,7 +2,7 @@
 
     <!-- Main Content -->
     <main class="flex-1 p-4 sm:p-6">
-      <h1 class="text-xl font-bold ">Manage Category</h1>
+      <h1 class="text-xl font-bold ">Manage Vlogs</h1>
       @if (session('success'))
       <h3 class="text-green-600">{{ session('success') }}</h3>
       @endif
@@ -26,12 +26,12 @@
                         </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200">
-                             @foreach ($categories as $category)
+                             @foreach ($vlogs as $vlog)
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"><img src="{{ $category->image }}" class="w-10 h-10 rounded-full " alt="{{ $category->image }}"></td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $category->name  }}</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $category->description }}</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-{{ $category->status == 1 ? 'green' : 'red' }}-800">{{ $category->status == 1 ? "Active" : "Inactive" }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"><img src="{{ $vlog->image }}" class="w-10 h-10 rounded-full " alt="{{ $category->image }}"></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $catvlogegory->name  }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $vlog->description }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-{{ $vlog->status == 1 ? 'green' : 'red' }}-800">{{ $category->status == 1 ? "Active" : "Inactive" }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                         <!-- <a href="{{ route('category_edit',[$category->id])}}" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-hidden focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Edit</a>
 

@@ -47,7 +47,7 @@ class Vlog extends Model
 
     public function vlog_manege(){
         $vlog = Vlog::orderBy('id','desc')->get();
-        return view('vlog.manage_vlog');
+        return view('vlog.manage_vlog',['vlogs' => $vlog]);
     }
 
 
