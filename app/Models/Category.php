@@ -86,6 +86,15 @@ class Category extends Model
 
     public function delete($id){
         $Category = Category::find($id);
+
+
+        if($Category->image){
+            $old_img = public_path($Category->image);
+           if(file_exists($old_img) || is_file($old_img)){
+                unlink($old_img);
+           }
+        }
+
         $Category->delete();
 
         return redirect()->route('category_manage')->with('success','Category Delete Successfull');
