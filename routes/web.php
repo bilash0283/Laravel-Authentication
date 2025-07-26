@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Models\Category;
+use App\Models\Vlog;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,7 +23,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/category-manage',[Category::class,'category'])->name('category_manage');
     Route::get('/category-edit/{id}',[Category::class,'edit'])->name('category_edit');
     Route::post('/category-update/{id}',[Category::class,'cat_update'])->name('category_update');
-    Route::get('/category-Delete/{id}',[Category::class,'delete'])->name('category_delete');
+    Route::get('/Category-Delete/{id}',[Category::class,'delete_cate'])->name('category_delete');
+
+    Route::get('/vlog-create',[Vlog::class,'create_vlog'])->name('create_vlog');
 
 });
 

@@ -38,7 +38,7 @@
       <nav class="p-4 space-y-2">
         <a href="{{ route('category_create') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Category</a>
         <a href="{{ route('category_manage') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Category</a>
-        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Vlog</a>
+        <a href="{{ route('create_vlog') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Add Vlog</a>
         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">Manage Vlog</a>
         <x-dropdown-link :href="route('logout')"
                 onclick="event.preventDefault();
