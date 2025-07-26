@@ -52,6 +52,7 @@ class Category extends Model
     }
 
     public function cat_update(Request $request,$id){
+
         $category = Category::findOrFail($id);
 
         $request->validate([
@@ -61,7 +62,7 @@ class Category extends Model
             'status' => "required"
         ]);
 
-        if($request->hash_file('image')){
+        if($request->image){
             $oldImage = public_path($category->image);
             if(file_exists($oldImage) && is_file($oldImage)){
                 unlink($oldImage);
