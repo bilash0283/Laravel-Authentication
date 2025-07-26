@@ -83,6 +83,14 @@ class Category extends Model
 
     }
 
+    public function delete(){
+
+        // $category = Category::find();
+        // $category->delete();
+
+        return "this is category delete section";
+    }
+
     
 
 }
