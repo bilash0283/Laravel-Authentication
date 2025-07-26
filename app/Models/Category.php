@@ -42,7 +42,7 @@ class Category extends Model
     }
 
     public function category(){
-        $category = Category::all();
+        $category = Category::orderBy('id', 'desc')->get();
         return view('category.view_cate',['categories' => $category]);
     }
 

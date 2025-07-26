@@ -9,7 +9,7 @@ class Vlog extends Model
 {
     public function create_vlog()
     {
-        $category = Category::where('status',1)->get();
+        $category = Category::where('status',1)->orderBy('id','desc')->get();
         return view('vlog.create',['categoryes' => $category]);
     }
 
