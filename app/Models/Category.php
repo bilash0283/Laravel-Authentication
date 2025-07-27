@@ -14,6 +14,8 @@ class Category extends Model
 
     public function store(Request $request){
 
+        dd($request);
+
         $request = validator([
             'name' => "required",
             'description' => "required",
