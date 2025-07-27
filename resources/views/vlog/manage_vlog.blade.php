@@ -21,6 +21,7 @@
                             <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Image</th>
                             <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
                             <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Description</th>
+                            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Category</th>
                             <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Status</th>
                             <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action</th>
                         </tr>
@@ -31,6 +32,9 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"><img src="{{ $vlog->image }}" class="w-10 h-10 rounded-full " alt="{{ $vlog->image }}"></td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $vlog->name  }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $vlog->description }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                        {{ $vlog->category->title ?? 'No Category' }}
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-{{ $vlog->status == 1 ? 'green' : 'red' }}-800">{{ $vlog->status == 1 ? "Active" : "Inactive" }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                         <!-- <a href="{{ route('category_edit',[$vlog->id])}}" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-hidden focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Edit</a>
