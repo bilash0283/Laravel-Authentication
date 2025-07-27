@@ -13,36 +13,33 @@ class Vlog extends Model
         return view('vlog.create',['categoryes' => $category]);
     }
 
-    public function vlog_store(Request $request){
-       $valided = $request->validator([
+   public function vlog_store(Request $request)
+    {
+        $validated = $request->validate([
             'name' => "required",
             'description' => "required",
             'category' => "required",
-            'image' => "mimes:jpg,jpeg,png",
+            'image' => "nullable|mimes:jpg,jpeg,png",
             'status' => "required"
         ]);
 
         $imageFull_name = '';
-        if(!empty($request->hasFile('image'))){
-            $image_name = time().'.'.$request-file('image');
-            $imageFull_name = "images/vlog_image/".$image_name;
-            $request->image->move(public_path('images/vlog_image'), $image_name);
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $image_name = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images/vlog_image'), $image_name);
+            $imageFull_name = 'images/vlog_image/' . $image_name;
         }
 
-
-       $vlog = new Vlog() ;
-
-        $vlog->name = $valided['name'];
-        $vlog->description = $valided['description'];
-        $vlog->category = $valided['category'];
+        $vlog = new Vlog();
+        $vlog->name = $validated['name'];
+        $vlog->description = $validated['description'];
+        $vlog->category = $validated['category'];
         $vlog->image = $imageFull_name;
-        $vlog->status = $valided['status'];
-
+        $vlog->status = $validated['status'];
         $vlog->save();
 
-        return redirect()->route('vlog_manage')->with('success','Vlog Save Successfull');
-
-
+        return redirect()->route('vlog_manage')->with('success', 'Vlog saved successfully.');
     }
 
     public function vlog_manege(){
