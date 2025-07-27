@@ -14,7 +14,7 @@ class Vlog extends Model
     }
 
     public function vlog_store(Request $request){
-        $request = validator([
+       $valided = $request->validator([
             'name' => "required",
             'description' => "required",
             'category' => "required",
@@ -23,8 +23,8 @@ class Vlog extends Model
         ]);
 
         $imageFull_name = '';
-        if(!empty($request->image)){
-            $image_name = time().'.'.$request->image->extension();
+        if(!empty($request->hasFile('image'))){
+            $image_name = time().'.'.$request-file('image');
             $imageFull_name = "images/vlog_image/".$image_name;
             $request->image->move(public_path('images/vlog_image'), $image_name);
         }
@@ -32,11 +32,11 @@ class Vlog extends Model
 
        $vlog = new Vlog() ;
 
-        $vlog->name = $request->name;
-        $vlog->description = $request->description;
-        $vlog->category = $request->category;
+        $vlog->name = $valided['name'];
+        $vlog->description = $valided['description'];
+        $vlog->category = $valided['category'];
         $vlog->image = $imageFull_name;
-        $vlog->status = $request->status;
+        $vlog->status = $valided['status'];
 
         $vlog->save();
 
