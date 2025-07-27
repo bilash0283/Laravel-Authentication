@@ -14,33 +14,31 @@ class Category extends Model
 
     public function store(Request $request){
 
-        dd($request);
-
-        $request = validator([
-            'name' => "required",
+        $request = request()->validate([
+            'title' => "required",
             'description' => "required",
-            'image' => "mimes:jpg,jpeg,png",
+            'image' => "nullable|mimes:jpg,jpeg,png",
             'status' => "required"
         ]);
-        
+
         $imageFull_name = '';
         if(!empty($request->image)){
             $image_name = time().'.'.$request->image->extension();
             $imageFull_name = "images/category_image/".$image_name;
             $request->image->move(public_path('images/category_image'), $image_name);
         }
+        $category = new Category;
 
-
-       $category = new Category ;
-
-        $category->name = $request->name;
-        $category->description = $request->description;
+        $category->name = $request['title'];
+        $category->description = $request['description'];
         $category->image = $imageFull_name;
-        $category->status = $request->status;
+        $category->status = $request['status'];
 
         $category->save();
 
-        return redirect()->route('category_create')->with('success','Category Save Successfull');
+        return redirect()->route('category_create')->with('success','Category Save Successful');
+
+
     }
 
     public function category(){

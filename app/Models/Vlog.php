@@ -26,7 +26,7 @@ class Vlog extends Model
         if(!empty($request->image)){
             $image_name = time().'.'.$request->image->extension();
             $imageFull_name = "images/vlog_image/".$image_name;
-            $request->image->move(public_path('images/category_image'), $image_name);
+            $request->image->move(public_path('images/vlog_image'), $image_name);
         }
 
 

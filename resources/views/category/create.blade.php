@@ -10,8 +10,8 @@
             <form action="{{ route('category_store') }}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="max-w-sm my-2">
-                  <label for="input-label" class="block text-sm font-medium mb-2">Name</label>
-                  <input type="text" name="name" id="input-label" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter Name">  
+                  <label for="input-label" class="block text-sm font-medium mb-2">Title</label>
+                  <input type="text" name="title" id="input-label" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter Name">  
               </div>
               <div class="max-w-sm my-2">
                   <label for="description" class="block text-sm font-medium mb-2">Description</label>
