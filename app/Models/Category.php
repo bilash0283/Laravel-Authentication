@@ -14,29 +14,29 @@ class Category extends Model
 
     public function store(Request $request){
 
-        $request = request()->validate([
-            'title' => "required",
-            'description' => "required",
-            'image' => "nullable|mimes:jpg,jpeg,png",
-            'status' => "required"
-        ]);
+        
+    $validated = $request->validate([
+        'title' => "required",
+        'description' => "required",
+        'image' => "nullable|mimes:jpg,jpeg,png",
+        'status' => "required"
+    ]);
 
-        $imageFull_name = '';
-        if(!empty($request->image)){
-            $image_name = time().'.'.$request->image->extension();
-            $imageFull_name = "images/category_image/".$image_name;
-            $request->image->move(public_path('images/category_image'), $image_name);
-        }
-        $category = new Category;
+    $imageFull_name = '';
+    if($request->hasFile('image')){
+        $image_name = time().'.'.$request->file('image')->extension();
+        $imageFull_name = "images/category_image/".$image_name;
+        $request->file('image')->move(public_path('images/category_image'), $image_name);
+    }
 
-        $category->name = $request['title'];
-        $category->description = $request['description'];
-        $category->image = $imageFull_name;
-        $category->status = $request['status'];
+    $category = new Category;
+    $category->name = $validated['title'];
+    $category->description = $validated['description'];
+    $category->image = $imageFull_name;
+    $category->status = $validated['status'];
+    $category->save();
 
-        $category->save();
-
-        return redirect()->route('category_create')->with('success','Category Save Successful');
+    return redirect()->route('category_create')->with('success','Category Save Successful');
 
 
     }
