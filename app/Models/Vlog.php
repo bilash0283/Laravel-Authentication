@@ -53,8 +53,8 @@ class Vlog extends Model
 
     public function vlog_edit($id)
     {
-        echo $id;
-        echo "vlog Edit page ";
+        $vlog = new Vlog()->find($id);
+        return view('vlog.vlog-edit',['vlog' => $vlog]);
     }
 
     public function vlog_delete()
