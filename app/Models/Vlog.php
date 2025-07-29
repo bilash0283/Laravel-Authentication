@@ -14,34 +14,35 @@ class Vlog extends Model
     }
 
     public function vlog_store(Request $request){
-       $valided = $request->validator([
-            'name' => "required",
-            'description' => "required",
-            'category' => "required",
-            'image' => "mimes:jpg,jpeg,png",
-            'status' => "required"
-        ]);
+        // ✅ Step 1: Validate request data
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'description' => 'required|string',
+        'category' => 'required|string|max:255',
+        'image' => 'nullable|mimes:jpg,jpeg,png|max:2048',
+        'status' => 'required|in:0,1',
+    ]);
 
-        $imageFull_name = '';
-        if(!empty($request->hasFile('image'))){
-            $image_name = time().'.'.$request-file('image');
-            $imageFull_name = "images/vlog_image/".$image_name;
-            $request->image->move(public_path('images/vlog_image'), $image_name);
-        }
+    // ✅ Step 2: Handle image upload (if any)
+    $imageFullName = '';
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('images/vlog_image'), $imageName);
+        $imageFullName = 'images/vlog_image/' . $imageName;
+    }
 
+    // ✅ Step 3: Save data to database
+    $vlog = new Vlog();
+    $vlog->name = $validated['name'];
+    $vlog->description = $validated['description'];
+    $vlog->category = $validated['category'];
+    $vlog->image = $imageFullName;
+    $vlog->status = $validated['status'];
+    $vlog->save();
 
-       $vlog = new Vlog() ;
-
-        $vlog->name = $valided['name'];
-        $vlog->description = $valided['description'];
-        $vlog->category = $valided['category'];
-        $vlog->image = $imageFull_name;
-        $vlog->status = $valided['status'];
-
-        $vlog->save();
-
-        return redirect()->route('vlog_manage')->with('success','Vlog Save Successfull');
-
+    // ✅ Step 4: Redirect with success message
+    return redirect()->route('vlog_manage')->with('success', 'Vlog Save Successful');
 
     }
 
