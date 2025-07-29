@@ -51,6 +51,10 @@ class Vlog extends Model
         return view('vlog.manage_vlog',['vlogs' => $vlog]);
     }
 
+    public function vlog_edit()
+    {
+        
+    }
 
 
 

@@ -28,6 +28,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/vlog-create',[Vlog::class,'create_vlog'])->name('create_vlog');
     Route::post('/Vlog-Save',[Vlog::class,'vlog_store'])->name('vlog_store');
     Route::get('/Vlog-manage',[Vlog::class,'vlog_manege'])->name('vlog_manage');
+    Route::get('/Vlog-edit/{id}',[Vlog::class,'vlog_edit'])->name('vlog_edit');
+    Route::get('/Vlog-delete/{id}',[Vlog::class,'vlog_delete'])->name('vlog_delete');
 
 });
 
