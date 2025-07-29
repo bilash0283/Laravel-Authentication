@@ -46,10 +46,15 @@ class Vlog extends Model
 
     }
 
-    public function vlog_manege(){
-        $vlog = Vlog::orderBy('id','desc')->get();
-        return view('vlog.manage_vlog',['vlogs' => $vlog]);
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
     }
+    public function vlog_manege(){
+         $vlogs = Vlog::with('category')->orderBy('id', 'desc')->get();
+        return view('vlog.manage_vlog', ['vlogs' => $vlogs]);
+    }
+
 
     public function vlog_edit($id)
     {
