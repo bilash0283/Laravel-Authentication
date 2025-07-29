@@ -67,9 +67,16 @@ class Vlog extends Model
     }
 
 
-    public function vlog_delete()
+    public function vlog_delete($id)
     {
+        $vlog = Vlog::find($id);
+        if(public_path($vlog->image)){
+            $image_path = public_path($vlog->image);
+            @unlink($image_path);
+        }
 
+        $vlog->delete();
+        return redirect()->route('vlog_manage')->with('success','Vlog Delete Successfull');
     }
 
 
