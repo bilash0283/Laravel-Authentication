@@ -53,9 +53,14 @@ class Vlog extends Model
 
     public function vlog_edit($id)
     {
-        $vlog = new Vlog()->find($id);
-        return view('vlog.vlog-edit',['vlog' => $vlog]);
+         $category = Category::where('status',1)->orderBy('id','desc')->get();
+        $vlog = Vlog::find($id);
+        return view('vlog.vlog_edit', [
+            'vlog' => $vlog,
+            'categoryes' => $category
+        ]);
     }
+
 
     public function vlog_delete()
     {
