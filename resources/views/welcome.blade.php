@@ -12,16 +12,6 @@
         </a>
     </div>
 
-    <div class="card">
-        <div class="card-header">
-            <h3>This is a Header Page</h3>
-        </div>
-        <div class="card-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quia beatae deserunt enim veritatis temporibus labore tempora modi quas, recusandae amet, ea rerum cumque ipsum illum veniam impedit. Culpa, qui!</p>
-            <button class="btn btn-success btn-sm py-2">Read More</button>
-        </div>
-    </div>
-
     <div class="max-w-7xl mx-auto px-4 py-5 bg-blue-50 flex col-span-3 gap-2">
         <div>
             <div class="max-w-md mx-auto">
