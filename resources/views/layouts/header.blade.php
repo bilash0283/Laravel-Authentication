@@ -30,7 +30,7 @@
         <p class="text-gray-600 text-base sm:text-lg mb-6">
           THERE YOUR SEARCH BLOGS DAILY LIFE STYLE , SUCCESSFULL REAL LIFE STORY , AND SHERE YOUR SUCCESS STORY
         </p>
-        <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-700 transition">
+        <a href="{{ route('login') }}" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-700 transition">
           GET STARTED
         </a>
       </div>

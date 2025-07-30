@@ -6,7 +6,8 @@ use App\Models\Vlog;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $vlogs = Vlog::where('status',1)->orderBy('id','desc')->get();
+    return view('welcome',['vlogs' => $vlogs]);
 });
 
 Route::get('/dashboard', function () {
