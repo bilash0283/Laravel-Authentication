@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
@@ -14,7 +13,6 @@ class Vlog extends Model
     }
 
     public function vlog_store(Request $request){
-        // ✅ Step 1: Validate request data
     $validated = $request->validate([
         'name' => 'required|string|max:255',
         'description' => 'required|string',
@@ -23,7 +21,6 @@ class Vlog extends Model
         'status' => 'required|in:0,1',
     ]);
 
-    // ✅ Step 2: Handle image upload (if any)
     $imageFullName = '';
     if ($request->hasFile('image')) {
         $image = $request->file('image');
@@ -32,7 +29,6 @@ class Vlog extends Model
         $imageFullName = 'images/vlog_image/' . $imageName;
     }
 
-    // ✅ Step 3: Save data to database
     $vlog = new Vlog();
     $vlog->name = $validated['name'];
     $vlog->description = $validated['description'];
@@ -41,7 +37,6 @@ class Vlog extends Model
     $vlog->status = $validated['status'];
     $vlog->save();
 
-    // ✅ Step 4: Redirect with success message
     return redirect()->route('vlog_manage')->with('success', 'Vlog Save Successful');
 
     }
@@ -80,6 +75,46 @@ class Vlog extends Model
     }
 
 
+    public function vlog_update(Request $request , $id)
+    {
+        $vlog = Vlog::findOrFail($id);
+
+        $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'description' => 'required|string',
+        'category' => 'required|string|max:255',
+        'image' => 'nullable|mimes:jpg,jpeg,png|max:2048',
+        'status' => 'required|in:0,1',
+    ]);
+
+    if ($request->hasFile('image')) {
+
+        if(public_path($vlog->image)){
+            $image_path = public_path($vlog->image);
+            @unlink($image_path);
+        }
+
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('images/vlog_image'), $imageName);
+        $imageFullName = 'images/vlog_image/' . $imageName;
+        $vlog->image = $imageFullName;
+    }
+
+    
+    $vlog->name = $validated['name'];
+    $vlog->description = $validated['description'];
+    $vlog->category = $validated['category'];
+    $vlog->status = $validated['status'];
+    $vlog->save();
+
+    return redirect()->route('vlog_manage')->with('success', 'Vlog Update Successful');
+    }
+
 
 }
+
+
+
+
 

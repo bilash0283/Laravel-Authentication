@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/Vlog-manage',[Vlog::class,'vlog_manege'])->name('vlog_manage');
     Route::get('/Vlog-edit/{id}',[Vlog::class,'vlog_edit'])->name('vlog_edit');
     Route::get('/Vlog-delete/{id}',[Vlog::class,'vlog_delete'])->name('vlog_delete');
+    Route::post('/Vlog-Update/{id}',[Vlog::class,'vlog_update'])->name('vlog_update');
 
 });
 
