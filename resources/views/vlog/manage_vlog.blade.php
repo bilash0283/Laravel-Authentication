@@ -33,7 +33,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $vlog->name  }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $vlog->description }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                                        {{ $vlog->category->title ?? 'No Category' }}
+                                        {{ $vlog->category }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-{{ $vlog->status == 1 ? 'green' : 'red' }}-800">{{ $vlog->status == 1 ? "Active" : "Inactive" }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
