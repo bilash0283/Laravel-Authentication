@@ -114,7 +114,8 @@ class Vlog extends Model
     }
 
     public function single_vlog($id){
-        return "this is a singe vlog page and id is = ".$id;
+        $vlog = Vlog::findOrFail($id);
+        dd($vlog);
     }
 
 
