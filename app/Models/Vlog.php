@@ -113,8 +113,8 @@ class Vlog extends Model
     return redirect()->route('vlog_manage')->with('success', 'Vlog Update Successful');
     }
 
-    public function single_vlog(){
-        return "this is a singe vlog page";
+    public function single_vlog($id){
+        return "this is a singe vlog page and id is = ".$id;
     }
 
 
