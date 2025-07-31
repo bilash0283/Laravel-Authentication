@@ -48,7 +48,7 @@
                                     </div>
                                 </div>
                                 <!-- Show Details Button -->
-                                <a href="{{ route('single_vlog') }}"
+                                <a href="{{ route('single_vlog',[$vlog->id]) }}"
                                     class="bg-blue-600 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-700 transition">
                                     Details
                                 </a>
