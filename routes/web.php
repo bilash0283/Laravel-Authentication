@@ -12,6 +12,8 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/single-Vlog',[Vlog::class,'single_vlog'])->name('single_vlog');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
