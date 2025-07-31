@@ -115,7 +115,7 @@ class Vlog extends Model
 
     public function single_vlog($id){
         $vlog = Vlog::findOrFail($id);
-        dd($vlog);
+        return view('vlog.single_vlog',['vlog' => $vlog]);
     }
 
 
